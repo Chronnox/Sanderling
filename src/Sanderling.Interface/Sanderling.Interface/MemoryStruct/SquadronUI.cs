@@ -2,9 +2,9 @@
 
 namespace Sanderling.Interface.MemoryStruct
 {
-	public interface SquadronsUI
+	public interface ISquadronsUI
 	{
-		IEnumerable<SquadronUI> SetSquadron { get; }
+		IEnumerable<ISquadronUI> SetSquadron { get; }
 
 		IUIElement LaunchAllButton { get; }
 
@@ -13,23 +13,23 @@ namespace Sanderling.Interface.MemoryStruct
 		IUIElement RecallAllButton { get; }
 	}
 
-	public interface SquadronUI
+	public interface ISquadronUI
 	{
 		int? SquadronNumber { get; }
 
-		SquadronHealth Health { get; }
+		ISquadronHealth Health { get; }
 
-		IEnumerable<SquadronAbility> SetAbility { get; }
+		IEnumerable<ISquadronAbility> SetAbility { get; }
 	}
 
-	public interface SquadronHealth
+	public interface ISquadronHealth
 	{
 		int? SquadronSizeMax { get; }
 
 		int? SquadronSizeCurrent { get; }
 	}
 
-	public interface SquadronAbility : IUIElement
+	public interface ISquadronAbility : IUIElement
 	{
 		int? Quantity { get; }
 	}
