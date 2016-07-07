@@ -15,11 +15,16 @@ namespace Sanderling.Interface.MemoryStruct
 
 	public interface ISquadronUI
 	{
+		ISquadronContainer Squadron { get; }
+
+		IEnumerable<ISquadronAbility> SetAbility { get; }
+	}
+
+	public interface ISquadronContainer : IContainer
+	{
 		int? SquadronNumber { get; }
 
 		ISquadronHealth Health { get; }
-
-		IEnumerable<ISquadronAbility> SetAbility { get; }
 	}
 
 	public interface ISquadronHealth
